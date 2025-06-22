@@ -18,7 +18,7 @@ export const router = createBrowserRouter([
         children: [
             {
                 index: true,
-                loader: () =>  axios(`${import.meta.env.VITE_SERVER}/coffees`),
+                loader: () =>  axios(`https://coffee-server-side-ochre.vercel.app/coffees`),
                 Component: Home,
             },
             {
@@ -35,7 +35,7 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/coffee/:id',
-                loader: ({params}) =>  axios(`${import.meta.env.VITE_SERVER}/coffee/${params.id}`),
+                loader: ({params}) =>  axios(`https://coffee-server-side-ochre.vercel.app/coffee/${params.id}`),
                 element: <PrivateRoute><CoffeeDetails /> </PrivateRoute>
             },
             {

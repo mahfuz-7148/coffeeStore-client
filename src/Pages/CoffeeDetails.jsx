@@ -19,7 +19,7 @@ const CoffeeDetails = () => {
     const handleLike = () =>  {
         if (saveUser?.email === email) return
 
-        axios.patch(`${import.meta.env.VITE_SERVER}/like/${_id}`,{
+        axios.patch(`https://coffee-server-side-ochre.vercel.app/like/${_id}`,{
             email: saveUser?.email
         })
             .then(data => {

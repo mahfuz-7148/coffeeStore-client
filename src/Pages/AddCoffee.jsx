@@ -15,7 +15,7 @@ const AddCoffee = () => {
         newCoffee.email = saveUser?.email
         newCoffee.likedBy = []
 
-        axios.post(`${import.meta.env.VITE_SERVER}/add-coffee`, newCoffee)
+        axios.post(`https://coffee-server-side-ochre.vercel.app/add-coffee`, newCoffee)
             .then(data => {
                 console.log(data.data)
             })
